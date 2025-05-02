@@ -7760,6 +7760,12 @@ figcaption {
     border-radius: 0;
   }
 
+  .swiper-wrapper.is-list {
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex-flow: column;
+  }
+
   .slider-titles_component {
     display: none;
   }
