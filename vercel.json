@@ -1,0 +1,79 @@
+{
+  "redirects": [
+    {
+      "source": "/o-mne.html",
+      "destination": "/o-mne",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt.html",
+      "destination": "/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-probinex.html",
+      "destination": "/projekt-probinex",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-esty.html",
+      "destination": "/projekt-esty",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-little-styler.html",
+      "destination": "/projekt-little-styler",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-bitbeli.html",
+      "destination": "/projekt-bitbeli",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-dubai-reality.html",
+      "destination": "/projekt-dubai-reality",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-colosseum-ticket.html",
+      "destination": "/projekt-colosseum-ticket",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-worm-up.html",
+      "destination": "/projekt-worm-up",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-sw-motech.html",
+      "destination": "/projekt-sw-motech",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-lyo-fresh.html",
+      "destination": "/projekt-lyo-fresh",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-get-out-fun.html",
+      "destination": "/projekt-get-out-fun",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-loga.html",
+      "destination": "/projekt-loga",
+      "permanent": true
+    },
+    {
+      "source": "/projekt-tiskoviny.html",
+      "destination": "/projekt-tiskoviny",
+      "permanent": true
+    }
+  ]
+}
