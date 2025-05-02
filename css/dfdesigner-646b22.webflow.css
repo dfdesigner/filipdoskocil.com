@@ -2566,12 +2566,8 @@ figcaption {
   inset: 0%;
 }
 
-.section_portfolio-header {
+.section_portfolio-header, .portfolio-card_content {
   display: none;
-}
-
-.portfolio-card_content {
-  display: flex;
 }
 
 .bg_image {
@@ -3738,7 +3734,7 @@ figcaption {
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
   font-family: Ppmigra, Palatino Linotype, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -4461,10 +4457,6 @@ figcaption {
     padding-top: 16px;
     padding-bottom: 16px;
     display: flex;
-  }
-
-  .contact_cta-text {
-    font-size: 3rem;
   }
 }
 
@@ -6070,7 +6062,6 @@ figcaption {
 
   .portfolio-card_content {
     margin-bottom: 16px;
-    display: block;
   }
 
   .bg_image {
@@ -6306,6 +6297,11 @@ figcaption {
 
   .div-block {
     width: 100%;
+  }
+
+  .hero_background-video-mobile {
+    height: 100svh;
+    display: block;
   }
 }
 
@@ -7154,10 +7150,6 @@ figcaption {
     padding-bottom: 8px;
   }
 
-  .hero_background-video {
-    display: block;
-  }
-
   .contact_card {
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
@@ -7766,12 +7758,6 @@ figcaption {
     white-space: normal;
     word-break: normal;
     border-radius: 0;
-  }
-
-  .swiper-wrapper {
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-    flex-flow: column;
   }
 
   .slider-titles_component {
