@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri May 02 2025 21:11:18 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Sat May 03 2025 05:57:40 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6597ddbf1e6491a6bf535dd7" data-wf-site="64b8d3c3e7ffc183ddfa8a14" lang="cs">
 <head>
   <meta charset="utf-8">
@@ -399,9 +399,9 @@ margin: 0rem !important;
                 <div class="ratio-box _3-2">
                   <a data-w-id="9fcb631d-9f5a-2046-9676-f16c2256d3ea" href="projekt-esty.html" class="portfolio-card w-inline-block">
                     <div class="bg_image">
-                      <div data-poster-url="videos/esty-cover-poster-00001.jpg" data-video-urls="videos/esty-cover-transcode.mp4,videos/esty-cover-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="ef9e517d-da22-01ed-970d-5c4cb2691ab5" class="portfolio-cover w-background-video w-background-video-atom"><video id="ef9e517d-da22-01ed-970d-5c4cb2691ab5-video" autoplay="" loop="" style="background-image:url(&quot;videos/esty-cover-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="videos/esty-cover-transcode.mp4" data-wf-ignore="true">
-                          <source src="videos/esty-cover-transcode.webm" data-wf-ignore="true">
+                      <div data-poster-url="videos/esty-cover-video-poster-00001.jpg" data-video-urls="videos/esty-cover-video-transcode.mp4,videos/esty-cover-video-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="ef9e517d-da22-01ed-970d-5c4cb2691ab5" class="portfolio-cover w-background-video w-background-video-atom"><video id="ef9e517d-da22-01ed-970d-5c4cb2691ab5-video" autoplay="" loop="" style="background-image:url(&quot;videos/esty-cover-video-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                          <source src="videos/esty-cover-video-transcode.mp4" data-wf-ignore="true">
+                          <source src="videos/esty-cover-video-transcode.webm" data-wf-ignore="true">
                         </video></div>
                       <div class="portfolio-overlay">
                         <div class="text-overlay">
@@ -943,70 +943,91 @@ if (Webflow.env("editor") === undefined) {
       }
     }, 250);
   });
-</script><!--  Swiper v11 CSS + JS  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</script> <!--  Swiper v11 JS  -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-if (window.innerWidth >= 768) {
-  // Inicializace textového slideru jako první (musí existovat před použitím v mainSwiper.on)
-  const textSwiper = new Swiper('.slider-titles_component', {
-    slidesPerView: 'auto',
-    direction: 'vertical',
-    allowTouchMove: false,
-    speed: 600,
-    loop: true,
-    centeredSlides: true,
-    slideActiveClass: 'is-active',
-    slideDuplicateActiveClass: 'is-active',
-  });
-  // Inicializace hlavního slideru
-  const mySwiper = new Swiper('.swiper-container', {
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    loop: true,
-    speed: 500,
-    lazy: true,
-    cssMode: false,
-    navigation: {
-      nextEl: '.my-custom-next',
-      prevEl: '.my-custom-prev',
-    },
-    keyboard: {
-      enabled: true,
-    },
-    simulateTouch: true,
-    allowTouchMove: true,
-    breakpoints: {
-      0: { slidesPerView: 1.5, spaceBetween: 8 },
-      767: { slidesPerView: 1.2, spaceBetween: 12 },
-      1024: { slidesPerView: 2.1, spaceBetween: 12 },
-      1280: { slidesPerView: 2.5, spaceBetween: 16 }
-    },
-    on: {
-      slideChange: function () {
-        const total = this.slides.length - 1;
-        const current = this.realIndex;
-        const pct = (current / total) * 100;
-        document.querySelector('.my-slider-progress-bar-portfolio').style.width = pct + '%';
-        // Tvrdá synchronizace s textovým sliderem s mírným zpožděním
-        setTimeout(() => {
-          if (textSwiper && typeof textSwiper.slideToLoop === 'function') {
-            textSwiper.slideToLoop(current);
+    let mySwiper = null;
+    let textSwiper = null;
+    function shouldEnableSwiper() {
+      return window.innerWidth >= 768 || window.innerWidth > window.innerHeight;
+    }
+    function initSwipers() {
+      textSwiper = new Swiper('.slider-titles_component', {
+        slidesPerView: 'auto',
+        direction: 'vertical',
+        allowTouchMove: false,
+        speed: 600,
+        loop: true,
+        centeredSlides: true,
+        slideActiveClass: 'is-active',
+        slideDuplicateActiveClass: 'is-active',
+      });
+      mySwiper = new Swiper('.swiper-container', {
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        speed: 500,
+        navigation: {
+          nextEl: '.my-custom-next',
+          prevEl: '.my-custom-prev',
+        },
+        keyboard: {
+          enabled: true,
+        },
+        simulateTouch: true,
+        allowTouchMove: true,
+        breakpoints: {
+          0: { slidesPerView: 1.5, spaceBetween: 8 },
+          767: { slidesPerView: 1.2, spaceBetween: 12 },
+          1024: { slidesPerView: 2.1, spaceBetween: 12 },
+          1280: { slidesPerView: 2.5, spaceBetween: 16 }
+        },
+        on: {
+          slideChange: function () {
+            const total = this.slides.length - 1;
+            const current = this.realIndex;
+            const pct = (current / total) * 100;
+            const bar = document.querySelector('.my-slider-progress-bar-portfolio');
+            if (bar) bar.style.width = pct + '%';
+            setTimeout(() => {
+              if (textSwiper && typeof textSwiper.slideToLoop === 'function') {
+                textSwiper.slideToLoop(current);
+              }
+            }, 50);
           }
-        }, 50);
+        }
+      });
+      document.querySelector('.my-custom-next')?.addEventListener('click', () => {
+        mySwiper.slideNext();
+      });
+      document.querySelector('.my-custom-prev')?.addEventListener('click', () => {
+        mySwiper.slidePrev();
+      });
+    }
+    function destroySwipers() {
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
+        mySwiper = null;
+      }
+      if (textSwiper) {
+        textSwiper.destroy(true, true);
+        textSwiper = null;
       }
     }
-  });
-  // Přepínání šipkami – ovládáme hlavní swiper
-  document.querySelector('.my-custom-next')
-    .addEventListener('click', function () {
-      mySwiper.slideNext();
+    function handleSwiperState() {
+      if (shouldEnableSwiper()) {
+        if (!mySwiper) initSwipers();
+      } else {
+        destroySwipers();
+      }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      handleSwiperState();
+      window.addEventListener('resize', () => {
+        setTimeout(handleSwiperState, 100);
+      });
     });
-  document.querySelector('.my-custom-prev')
-    .addEventListener('click', function () {
-      mySwiper.slidePrev();
-    });
-</script>
+  </script>
 </body>
 </html>
