@@ -2110,6 +2110,10 @@ figcaption {
   display: flex;
 }
 
+.services-list-text {
+  text-transform: uppercase;
+}
+
 .services-image {
   z-index: 5;
   object-fit: cover;
@@ -2176,7 +2180,7 @@ figcaption {
 .services-text {
   text-transform: uppercase;
   padding-bottom: 6px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -3768,12 +3772,6 @@ figcaption {
     font-size: 33px;
   }
 
-  h4 {
-    font-family: ivypresto-display, sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-  }
-
   a {
     font-family: Generalsans Regular;
     font-weight: 400;
@@ -3884,7 +3882,6 @@ figcaption {
   }
 
   .heading-style-h3 {
-    text-transform: uppercase;
     font-size: 80px;
   }
 
@@ -4270,10 +4267,6 @@ figcaption {
     inset: 0%;
   }
 
-  .services-text {
-    font-size: 22px;
-  }
-
   .purple-progress-bar {
     background-color: var(--blue-violet);
     height: 8px;
@@ -4476,10 +4469,7 @@ figcaption {
   }
 
   h4 {
-    letter-spacing: 0;
-    font-family: ivypresto-display, sans-serif;
     font-size: 32px;
-    font-weight: 600;
   }
 
   a {
@@ -4583,10 +4573,6 @@ figcaption {
 
   .margin-xxhuge {
     margin: 200px;
-  }
-
-  .heading-style-h3 {
-    text-transform: uppercase;
   }
 
   .text-rich-text ul, .text-rich-text ol {
@@ -6819,6 +6805,10 @@ figcaption {
 
   .services-list {
     grid-row-gap: 4px;
+  }
+
+  .services-list-text {
+    font-size: .875rem;
   }
 
   .services-item {
