@@ -3514,6 +3514,10 @@ figcaption {
   display: inline-block;
 }
 
+.services_image.webdesign {
+  border-radius: 0;
+}
+
 .services_accordian {
   z-index: 0;
   width: 100%;
