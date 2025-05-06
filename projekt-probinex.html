@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 11:05:07 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 11:16:47 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6597ddbf1e6491a6bf535ddf" data-wf-site="64b8d3c3e7ffc183ddfa8a14" lang="cs">
 <head>
   <meta charset="utf-8">
@@ -55,11 +55,13 @@ html.lenis {
 }
 </style>
   <style>
-/* Oprava probliknutí fontu při načtení stránky */
-html.wf-loading * {  
-        opacity: 0;
-}
+html { opacity: 0; transition: opacity 0s ease-out; }
+html.webflow-loaded { opacity: 1; }
 </style>
+  <script>
+var Webflow = Webflow || [];
+Webflow.push(function() { $('html').addClass('webflow-loaded') });
+</script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/css/splide-core.min.css">
   <style>
 .splide__track {
