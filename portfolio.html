@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 12:45:05 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed May 14 2025 12:04:32 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6597ddbf1e6491a6bf535dd7" data-wf-site="64b8d3c3e7ffc183ddfa8a14" lang="cs">
 <head>
   <meta charset="utf-8">
@@ -65,26 +65,13 @@ html.lenis {
   .slider-titles_component {
     pointer-events: none;
   }
-  /* Animace category_tag pro swiper-slide-active */
-  .swiper-slide .category_tag {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 300ms ease-out, transform 1200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* 🔧 Oprava roztahování Swiperu při načítání */
+  .swiper-container {
+    visibility: hidden;
   }
-  .swiper-slide.swiper-slide-active .category_tag {
-    opacity: 1;
-    transform: translateY(0);
+  .swiper-initialized {
+    visibility: visible;
   }
-  .swiper-slide .category_tag.cat_01 { transition-delay: 0.2s; }
-  .swiper-slide .category_tag.cat_02 { transition-delay: 0.4s; }
-  .swiper-slide .category_tag.cat_03 { transition-delay: 0.6s; }
-  .swiper-slide .category_tag.cat_04 { transition-delay: 0.8s; }
-  .swiper-slide .category_tag.cat_05 { transition-delay: 1s; }
-  .swiper-slide.swiper-slide-active .category_tag.cat_01 { transition-delay: 0.2s; }
-  .swiper-slide.swiper-slide-active .category_tag.cat_02 { transition-delay: 0.4s; }
-  .swiper-slide.swiper-slide-active .category_tag.cat_03 { transition-delay: 0.6s; }
-  .swiper-slide.swiper-slide-active .category_tag.cat_04 { transition-delay: 0.8s; }
-  .swiper-slide.swiper-slide-active .category_tag.cat_05 { transition-delay: 1s; }
 </style>
 </head>
 <body>
@@ -938,7 +925,7 @@ if (Webflow.env("editor") === undefined) {
     }, 250);
   });
 </script> <!--  Swiper v11 JS  -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer=""></script>
   <script>
     let mySwiper = null;
     let textSwiper = null;
