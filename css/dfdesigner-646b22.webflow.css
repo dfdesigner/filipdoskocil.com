@@ -3081,7 +3081,6 @@ figcaption {
 
 .section_intro-video {
   z-index: 0;
-  position: relative;
 }
 
 .intro_lottie {
@@ -7663,10 +7662,6 @@ figcaption {
     display: block;
   }
 
-  .section_intro-video {
-    padding-top: 20px;
-  }
-
   .intro_lottie {
     display: none;
   }
@@ -7785,10 +7780,6 @@ figcaption {
   .contact_content {
     flex-flow: column;
     display: flex;
-  }
-
-  .hero_background-video-mobile {
-    display: block;
   }
 }
 
